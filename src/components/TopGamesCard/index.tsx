@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { Alert } from 'react-native';
 import { Linking, TouchableOpacity, Image } from 'react-native';
-// import SkeletonContent from 'react-native-skeleton-content';
+
 import {
   Fade,
   Placeholder,
@@ -39,15 +39,6 @@ export function TopGamesCard({ url, name, isLoadingTopGames }: TopGamesCardProps
   }, [isLoadingTopGames])
 
   return (
-    // <SkeletonContent
-    //   isLoading={isLoading}
-    //   boneColor="#1C1C21"
-    //   highlightColor="#272730c1"
-    //   duration={2000}
-    //   layout={[
-    //     { key: 'banner', width: 150, height: 200, borderRadius: 10, marginRight: 16 },
-    //   ]}
-    // >
     isLoading ? (
       <Placeholder
         Animation={Fade}
@@ -75,6 +66,5 @@ export function TopGamesCard({ url, name, isLoadingTopGames }: TopGamesCardProps
         />
       </TouchableOpacity>
     )
-    // </SkeletonContent>
   );
 }
